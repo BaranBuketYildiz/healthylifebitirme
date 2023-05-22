@@ -1,0 +1,52 @@
+body{
+    padding-top:80px;
+}
+.form{
+    width:100%;
+    padding:30px 10vw;
+}
+.form input{
+    background-color:#f5f5f5;
+    margin: 10px 0;
+
+}
+.three-input-container{
+    display: flex;
+    gap: 20px;
+}
+input, textarea{
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 3.5rem;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+textarea{
+    height: 15rem;
+    font-family: 'lato', sans-serif;
+    resize: none;
+    outline: none;
+}
+
+.cart-section{
+    margin-top: -30vh;
+}
+
+.error{
+    display: block;
+    font-size: .8rem;
+    color: rgb(255, 41, 41);
+    margin: 5px 0;
+    text-transform: capitalize;
+    font-family: 'lato', sans-serif;
+    user-select: none;
+    opacity: 0;
+}
+
+.error.show{
+    opacity: 1;
+}

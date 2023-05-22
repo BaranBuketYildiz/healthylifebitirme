@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Life</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="css/AnaSayfa.css">
+
+    <link rel="stylesheet" href="sporSayfalari/css/style.css">
+    <link rel="stylesheet" href="css/YemekServisi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    
+    <nav class="navbar"></nav>
+
+    <!---->
+    
+<section class="home" id="home">
+
+  <div class="swiper-container home-slider">
+
+      <div class="swiper-wrapper wrapper">
+
+          <div class="swiper-slide slide">
+              <div class="content">
+                  <span>Kol Kası Rehberi</span>
+                  <h3>Neden Kol Kası Antremanı Yapmalıyım ?</h3>
+                  <p>
+                    Kol kası antrenmanları, güçlü ve sağlıklı bir üst vücut için önemlidir. Kol kası antrenmanları yapmak, metabolizmanızı artırarak yağ yakımını da teşvik eder</p>
+              </div>
+              <div class="image">
+                  <img src="image/kol1.png" alt="">
+              </div>
+          </div>
+
+          <div class="swiper-slide slide">
+              <div class="content">
+                  <span>Kol Kası Rehberi</span>
+                  <h3>Kol Kası Antremanları</h3>
+                  <p> Kol kası antrenmanları, özellikle biceps ve triceps kaslarını hedef alarak üst vücudun güçlenmesine ve şekillenmesine yardımcı olur. Bu antrenmanlar, günlük yaşam aktivitelerinde kol kaslarının daha etkili bir şekilde kullanılmasına da yardımcı olabilir.</p>
+              </div>
+              <div class="image">
+                  <img src="image/kol2.png" alt="">
+              </div>
+          </div>
+
+          <div class="swiper-slide slide">
+              <div class="content">
+                  <span>Kol Kası Rehberi</span>
+                  <h3>Kol Kası Antremanı Faydaları</h3>
+                  <p> Kol kası antrenmanları ayrıca metabolizma hızını artırarak yağ yakımını da destekleyebilir. Ayrıca, kuvvet antrenmanı yapan kişilerin kas kütlesinin artması, kemik yoğunluğunun artması ve yaşlanma etkilerinin geciktirilmesi gibi birçok sağlık yararını da içerebilir.</p>
+              </div>
+              <div class="image">
+                  <img src="image/kol3.png" alt="">
+              </div>
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+
+<div class="dishes" id="dishes">
+
+  <h3 class="sub-heading">Kol Kasları için Antremanlar</h3>
+  <h1 class="heading"> Antremanlar</h1>
+</div>
+
+
+    <div class="about" id="About">
+       <!-- <div class="about_main">
+
+            <div class="image">
+                <img src="image/Food-Plate.png">
+            </div>
+
+            <div class="about_text">
+                <h1><span>Sağlıklı</span>Beslenme</h1>
+                <h3>Neden Sağlıklı Beslenmeliyiz ?</h3>
+                <p>
+                    Dengeli, düzenli ve akılcı beslendiğinizde, beyniniz daha iyi, daha berrak çalışır, hafızanız güçlenir. Veriminiz, bağışıklığınız artar, hastalıklara karşı daha dirençli hale gelirsiniz, cildiniz sağlıklı olur. Kısaca daha kaliteli bir yaşam sürersiniz.
+                </p>
+            </div>
+
+        </div>--->
+    </div>
+
+ 
+ 
+  
+  <!-- Scroll To Top --> 
+  
+  <a id="back-top" class="back-to-top page-scroll" href="#main"> <i class="ion-ios-arrow-thin-up"></i> </a> 
+  
+  <!-- Scroll To Top Ends--> 
+  
+</div>
+<!-- Main Section -->
+</div>
+
+<script>
+let kullanici = JSON.parse(sessionStorage.user || null)
+
+  if(kullanici == null){
+      location.replace('/login');
+  } 
+  
+  
+  const setupKol = (tag) => {
+      fetch('/get-kullaniciKol', {
+          method: 'post',
+          headers: new Headers({'Content-Type': 'application/json'}),
+          body: JSON.stringify({tag: tag})
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        data.forEach(profil => createKol(profil));
+  
+      })
+  }
+  
+  setupKol();
+  
+  const createKol= (data) => {
+      console.log(data)
+      let productContainer = document.querySelector('.about');
+      productContainer.innerHTML += `
+      <div class="about_main">
+
+<div class="image" >
+     <img src="${data.image}" >
+   </div>
+
+ <div class="about_text">
+       <h1>${data.title}</h1>
+       <br><h3>${data.sportKas}</h3>
+     </br>
+     <p>
+      ${data.sporYapilis} </p>
+</div>
+<div class="videoWrapper">
+ <h5>Hareketin Videosu</h5>
+<iframe width="700" height="400" "
+src="https://www.youtube.com/embed/${data.sporVideo.slice(-11)}">
+</iframe>
+</div>
+</div>
+</div>
+
+           `
+     
+  }
+  </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/nav.js"></script>  
+  <script src="js/yemekservis.js"></script>
+</body>
+</html>

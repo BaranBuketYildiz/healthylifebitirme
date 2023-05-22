@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store : Cart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Anasayfa.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/konum.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsxvhmDY4o7HNlA0Pil2G_bW2ETr14_7M&callback=initMap"></script>
+   
+
+</head>
+<body>
+
+    <nav class="navbar"></nav>
+    
+    <div class="error">
+        <p>some error occured</p>
+    </div>
+    <h1>Konum Bilgisi Örneği</h1>
+    <div id="map"></div>
+    <form>
+      
+       
+        <input type="text" id="lat" name="lat" required><br>
+     
+        <input type="text" id="lng" name="lng" required><br>
+    </form> 
+    <form>
+    
+   <div class="form">
+    <h1 class="heading"> ADRES</h1>
+    <p class="text">Siparişin ulaşacağı adres</p>
+
+    <input type="text" id="address" placeholder="adres">
+    <input type="text" id="street" placeholder="sokak">
+    <input type="text" id="landmark" placeholder="mahalle">
+
+     <div class="three-input-container">
+        <input type="text" id="city" placeholder="Bina No">
+        <input type="text" id="state" placeholder="Kat">
+        <input type="text" id="pincode" placeholder="Daire No">
+     </div>
+     <input type="text" id="number" placeholder="telefon numarası">
+
+
+   </div>
+
+    
+   <div class="cart-section">
+    <div class="product-list">
+        <p class="section-heading">Sepetinize Ekledikleriniz</p>
+        <div class="cart-container">
+           
+        </div>
+    </div>
+
+    <div class="checkout-section">
+        <div class="checkout-box">
+            <p class="text">Toplam ödemeniz gereken tutar,</p>
+            <h1 class="bill">00TL</h1>
+            <a href="/checkout" class="place-order-btn">Ödemeyi yap</a>
+        </div>
+    </div>
+</div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/homeyemek.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+    
+
+   
+        
+    
+    
+</body>
+</html>

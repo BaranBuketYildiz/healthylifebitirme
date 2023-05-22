@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+   Healthy Life
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="css/konum.css">
+
+</head>
+
+<body class="g-sidenav-show   bg-gray-100">
+  <div class="min-height-300 bg-primary position-absolute w-100"></div>
+  <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+        <span class="ms-2 font-weight-bold navbar-brand m-0" style="font-size:30px;">Healty Life</span>
+      </a>
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+     <!--NAVBARR-->
+    </div>
+   
+  </aside>
+  <main class="main-content position-relative border-radius-lg ">
+   
+    <!-- End Navbar -->
+  
+
+    <img src="../img/loading.gif" class="loader" alt="">
+
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-4">
+        <div class="card-header pb-0">
+          <h6>SİPARİŞLER</h6>
+        </div>
+        <div class="card-body px-0 pt-0 pb-2">
+          <div class="table-responsive p-0">
+           <table class="table align-items-center mb-0">
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ürünler</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Adress</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Yemek Şirketi</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Müşteri</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">KONUM</th>
+
+                 
+                  <th class="text-secondary opacity-7"></th>
+                </tr>
+              </thead>
+              <tbody class="users">
+               
+               <!-- <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">John Michael</h6>
+                        <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="text-xs font-weight-bold mb-0">Manager</p>
+                    <p class="text-xs text-secondary mb-0">Organization</p>
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                    <span class="badge badge-sm bg-gradient-success">Online</span>
+                  </td>
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                  </td>
+                  <td class="align-middle">
+                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                      Edit
+                    </a>
+                  </td>
+                </tr> -->
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+</div>
+
+
+ 
+ 
+
+
+  <script>
+    let yemeksirket = JSON.parse(sessionStorage.yemeksirket || null)
+
+if(yemeksirket == null){
+    location.replace('/yemeksirketlogin');
+} 
+const createorder = (data) => {
+  window.addEventListener('load', () => {
+  fetchData(data.address.lat, data.address.lng);
+});
+
+    let productContainer = document.querySelector('.users');
+    productContainer.innerHTML += `
+    <tr>
+        <td>
+            <div class="d-flex px-2 py-1">
+                <div>
+                    ${data.items.map(item => `<img src="${item.image}" class="avatar avatar-sm me-3" >`).join('')}
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                    ${data.items.map(item =>` <h6 class="mb-0 text-sm"> İsim: ${item.title} Adet:${item.item}</h6>`).join('')}
+                </div>
+            </div>
+        </td>
+        <td>
+            <h6 class="mb-0 text-sm">ADRES</h6>
+            <p class="text-xs font-weight-bold mb-0">adres: ${data.address.address}</p>
+            <p class="text-xs text-secondary mb-0">sokak: ${data.address.street}</p>
+            <p class="text-xs font-weight-bold mb-0">mahalle:${data.address.landmark}</p>
+            <p class="text-xs text-secondary mb-0">BinaNo:${data.address.city} Kat:${data.address.state} DaireNo:${data.address.pincode}</p>
+        </td>
+        <td>
+            <p class="text-xs font-weight-bold mb-0">    ${data.items.map(item =>` <h6 class="mb-0 text-sm"> Ürün: ${item.title}--Sirket:${item.sirketName}</h6>`).join('')}</p>
+        </td>
+        <td>
+            <h6 class="mb-0 text-sm">MÜŞTERİ</h6>
+            <p class="text-xs font-weight-bold mb-0">email: ${data.email}</p>
+            <p class="text-xs font-weight-bold mb-0">numara: ${data.address.number}</p>
+        </td>
+        <td>
+            <h6 class="mb-0 text-sm">KONUM</h6>
+            <button id="konum" onclick="fetchData('${data.address.lat}','${data.address.lng}')">KONUMU Getir</button>
+            <table>
+                <thead>
+                  
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+            <div id="map" style=" width: 300px;
+            height: 300px;
+            background-color: gray;
+            border: 1px solid black;
+            box-sizing: border-box;"></div>
+        </td>
+    </tr> 
+    `;
+
+    // tbody etiketinin içeriğini temizle
+    let tableBody = document.getElementById('tableBody');
+    tableBody.innerHTML = '';
+
+}
+
+
+
+let loader = document.querySelector('.loader');
+let noProductImg = document.querySelector('.no-product');
+
+const setupProducts = () => {
+    fetch('/get-order', {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify({email : yemeksirket.email})
+    })
+    .then(res => res.json())
+    .then(data => {
+        loader.style.display = 'none';
+        console.log(data);
+
+        if(data == 'no products'){
+            noProductImg.style.display = 'block';
+        } else{
+            data.forEach(profil => createorder(profil));
+        }
+    })
+}
+
+setupProducts();
+
+
+
+
+
+var map;
+        var marker;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 39.92077, lng: 32.85411},
+                zoom: 11
+            });
+            map.addListener('click', function(event) {
+                placeMarker(event.latLng);
+                getAddress(event.latLng);
+            });
+        }
+
+        // Verileri getir
+        function fetchData(lat, lng) {
+  var row = document.createElement("tr");
+  var addressCell = document.createElement("td");
+  var latCell = document.createElement("td");
+  var lngCell = document.createElement("td");
+  latCell.innerHTML = lat;
+  lngCell.innerHTML = lng;
+ 
+  // Yeni koordinatları kullanarak haritayı güncelle
+  var uluru = {lat: parseFloat(lat), lng: parseFloat(lng)};
+  var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 39.92077, lng: 32.85411},
+      zoom: 16,
+      center: uluru
+  });
+  var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+  });
+}
+
+
+  </script>
+  <script src="./assets/js/yemeksirketnav.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsmGGoFB9Q_LPaAcwFK7g0_SgXte8Il0c"></script>
+
+</body>
+
+</html>
+
+
+
+

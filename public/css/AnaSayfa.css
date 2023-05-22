@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'cinzel', serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding-left: 5vw;
+    z-index: 9;
+    transition: .5s;
+}
+
+.navbar.bg, .navbar.dark{
+    background: rgb(104, 151, 108);
+}
+
+.links-container{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.link-item{
+    margin: 10px;
+}
+
+.link{
+    font-size: 20px;
+    color: rgb(104, 151, 108);
+    text-decoration: none;
+    padding: 10px;
+    opacity: 0.7;
+    transition: .5s;
+}
+
+.navbar.bg .link, .navbar.dark .link{
+    color: rgb(104, 151, 108);
+    opacity: 0.5;
+}
+
+.link.active, .link:hover, .navbar.bg .link:hover, .navbar.bg .link.active{
+    opacity: 1;
+}
+
+.user-interactions{
+    display: flex;
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-box{
+    position: relative;
+    width: 350px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 30px;
+}
+
+.search{
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 20px;
+    text-transform: capitalize;
+    outline: none;
+}
+.search::placeholder{
+    color: #fff;
+}
+
+.navbar.bg .search, .navbar.bg .search::placeholder, .navbar.dark .search, .navbar.dark .search::placeholder{
+    color: #00000070;
+    border-color: #00000070;
+}
+
+.search-btn{
+    min-width: 40px;
+    height: 40px;
+    position: relative;
+    border: none;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.search-btn img{
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.cart, .user{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.cart-icon, .user-icon{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-count{
+    font-family: 'lato', sans-serif;
+    color: #d5be8b;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 50%;
+    background: #190c05;
+    position: absolute;
+    bottom: -12px;
+    left: -12px;
+}
+
+.slider{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:100px;
+    height: 100px;
+ 
+  }
+  
+  .slider img{
+   height: 700px;
+   
+  }
+  
+
+
+  .quality{
+    margin-top: 800px;
+    padding: 4rem 7%;
+    background-image: linear-gradient(60.34deg,#e4e2e2 52.45%,var(--green)52.45%) ;
+}
+
+.main-quality{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:15px;
+}
+
+.main-inner-quality{
+flex: 1 1 45rem;
+}
+
+.quality-content{
+    padding:0 4rem;
+}
+
+.quality-content h1{
+    color:var(--btn-color);
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+
+.quality-content p{
+    width: 750px;
+    text-align: justify;
+    margin-right: 10px;
+    line-height: 28px;
+    font-size: 20px;
+    hyphens: auto;
+}
+
+.quality-image{
+    width: 120%;
+    margin-left:100px ;
+}
+
+.quality-image img{
+    width: 80%;
+}
+
+
+
+/*healthylife*/
+
+.healthylife{
+    margin-top: 10px;
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0px;
+}
+
+.healthylife .healthylife_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.healthylife .healthylife_main .image img{
+    width: 700px;
+    position: relative;
+    top: -70px;
+    margin-left: 20px;
+}
+
+.healthylife .healthylife_main .healthylife_text h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+    top: -40px;
+}
+
+.healthylife .healthylife_main .healthylife_text h1{
+    font-size:55px;
+    position: relative;
+    bottom: 50px;
+    top: -40px;
+}
+
+.healthylife .healthylife_main .healthylife_text h3{
+    font-size: 40px;
+    margin-top: -200px;
+    color:#fac031;
+    
+}
+
+.healthylife .healthylife_main .healthylife_text p{
+    width: 750px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 28px;
+    font-size: 20px;
+    hyphens: auto;
+}
+
+
+h3{
+    font-size: 40px;
+    padding: 5px;
+  }
+  
+  
+  h2{
+    padding-top: 150px;
+  }
+  
+  .bmr-hesaplama{
+    background-color: #d6b1aa;
+    margin-top: 4.4rem;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .healthylifekalori .healthylife_main .image img{
+    margin-top: 150px;
+           width:600px ;
+  }
+  
+  
+  .kalori-hesaplama{
+    background-color: #eed9bb;
+    margin-top: 4.4rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form{
+    margin-top: 100px;
+    font-size: 30px;
+    height: 80vh;
+    width: 100%;
+    padding: 50px;
+  }
+  
+  .entry{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+  }
+  
+  .index{
+    font-size: 20px;
+    width: 300px;
+    border-color: orangered;
+  }
+  .gender{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .activity{
+    display: flex;
+    float: left;
+  }
+  
+  .submit{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    background-color: orangered;
+    margin-top: auto;
+  }
+  
+  
+  .title-dark{
+    color: #000;
+  }
+  
+  .hesap{
+    height:100rem;
+    background-size: auto 55rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: .5rem solid orangered;
+    border-bottom: .5rem solid orangered;
+    margin: 0;
+    z-index: 3;
+  }
+  
+  .bmr-hesaplama{
+    border-bottom: none;
+  }
+  
+  .title{
+    color: black;
+    text-align: center;
+    padding-top: 5.5rem;
+  }
+  
+  .title-heading{
+    font-size: 5rem;
+    line-height: 1;
+    letter-spacing: -.01rem;
+  }
+  
+  .title-explanation{
+    font-size: 2rem;
+    color: #888;
+    margin-top: .7rem;
+  }
+  
+  .title-exp{
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    
+    header{
+        padding:1rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+
+}
+
+@media (max-width:768px){
+
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background:#fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        padding:1.5rem;
+        margin:1rem;
+        font-size: 2rem;
+        background:#eee;
+    }
+
+    #search-form #search-box{
+        width:90%;
+        margin:0 1rem;
+    }
+
+    .home .home-slider .slide .content h3{
+        font-size: 5rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .dishes .box-container .box img{
+        height:auto;
+        width: 100%;
+    }
+
+    .order form .inputBox .input{
+        width:100%;
+    }
+
+}
+
+
+.user-icon-popup{
+    position: absolute;
+    top: 200%;
+    padding: 20px;
+    background: #fff;
+    font-family: 'lato', sans-serif;
+    width: 180px;
+    right: 0;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #190c05;
+    display: none;
+}
+
+.user-icon-popup.active{
+    display: block;
+}
+
+.user-icon-popup p{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    line-height: 2rem;
+}
+
+.user-icon-popup a{
+    display: block;
+    margin: 20px auto 0;
+    text-decoration: none;
+    color: #fff;
+    background: rgb(104, 151, 108);;
+    padding: 10px;
+    width: 100px;
+    text-transform: capitalize;
+    border-radius: 5px;
+}

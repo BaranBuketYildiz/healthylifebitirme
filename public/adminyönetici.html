@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+   Healthy Life
+  </title>
+   <!--     Fonts and icons     -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+   <!-- Nucleo Icons -->
+   <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+   <!-- Font Awesome Icons -->
+   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+   <!-- CSS Files -->
+   <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/yemekekle.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body class="g-sidenav-show   bg-gray-100">
+  <div class="min-height-300 bg-primary position-absolute w-100"></div>
+  <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+        <span class="ms-2 font-weight-bold navbar-brand m-0" style="font-size:30px;">Healty Life</span>
+      </a>
+    </div>
+    <hr class="horizontal dark mt-0">
+
+    <!--NAVBAR-->
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+    </div>
+   
+  </aside>
+  <main class="main-content position-relative border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Sayfa</a></li>
+            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Yönetici Ekleme</li>
+          </ol>
+          <h6 class="font-weight-bolder text-white mb-0">Yönetici Ekleme</h6>
+        </nav>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+  <!-- Yemek ekleme -->
+  <img src="../img/loading.gif" class="loader" alt="">
+
+  <h1 class="title">Yönetici Ekleme</h1>
+
+  <div class="error">
+      <p>some error occured</p>
+  </div>
+
+ 
+  <section class="product-section">
+      
+      <div class="product-detail">
+        <input type="text" class="form-control" id="name" placeholder="isim" aria-label="Name">
+        <input type="text" class="form-control" id="sirketname" placeholder="şirket ismi" aria-label="Name">
+        <input type="email" class="form-control" id="email" placeholder="Email" aria-label="Email">
+        <input type="password" class="form-control" id="password" placeholder="sifre" aria-label="Password">
+
+       
+      </div>
+  </section>
+  
+ 
+
+  <div class="btn-wrapper">
+      <button class="product-btn add-product-btn">Yönetici Ekle</button>
+  </div>
+
+</main>
+</section>
+
+
+<img src="../img/loading.gif" class="loader" alt="">
+
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-4">
+        <div class="card-header pb-0">
+          <h6>YÖNETİCİLER</h6>
+        </div>
+        <div class="card-body px-0 pt-0 pb-2" >
+          <div class="table-responsive p-0">
+           <table class="table align-items-center mb-0" >
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">MAİL</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 " style="margin-left:8000px;">MAİL</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ">ADI/SİRKET İSMİ</th>
+                 
+                  
+                 
+                  <th class="text-secondary opacity-7"></th>
+                </tr>
+              </thead>
+              <tbody class="yönetici">
+               
+               <!-- <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">John Michael</h6>
+                        <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="text-xs font-weight-bold mb-0">Manager</p>
+                    <p class="text-xs text-secondary mb-0">Organization</p>
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                    <span class="badge badge-sm bg-gradient-success">Online</span>
+                  </td>
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                  </td>
+                  <td class="align-middle">
+                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                      Edit
+                    </a>
+                  </td>
+                </tr> -->
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+</div>
+
+
+
+ 
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <script>
+    
+let editables = [...document.querySelectorAll('*[contenteditable="true"]')];
+
+editables.map((element) => {
+    let placeholder = element.getAttribute('data-placeholder');
+    element.innerHTML = placeholder;
+    element.addEventListener('focus', () => {
+        if(element.innerHTML === placeholder){
+            element.innerHTML = '';
+        }
+    })
+    element.addEventListener('focusout', () => {
+        if(!element.innerHTML.length){
+            element.innerHTML = placeholder;
+        }
+    })
+})
+
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+  <script src="./assets/js/adminnav.js"></script>
+
+  <script>
+
+let admin= JSON.parse(sessionStorage.admin || null);
+window.onload = () => {
+    if(admin == null){
+        location.replace('/adminlogin')
+    }
+}
+// form
+let formBtn = document.querySelector('.add-product-btn');
+let loader = document.querySelector('.loader');
+
+formBtn.addEventListener('click', () => {
+    let fullname = document.querySelector('#name') || null;
+    let sirketname = document.querySelector('#sirketname') 
+    let email = document.querySelector('#email');
+    let password = document.querySelector('#password');
+   
+console.log(fullname);
+    if(fullname != null){// singup page
+        // form validation
+        if(fullname.value.length < 3){
+            showFormError('isim giriniz');
+        } else if(!email.value.length){
+            showFormError('email giriniz');
+        } else if(password.value.length < 3){
+            showFormError('şifre 8 karakterden uzun olmalı');
+        }  else if(sirketname.value.lengt<3){
+            showFormError('sirket ismi giriniz');
+        } else{
+            // submit form
+            loader.style.display = 'block';
+            sendData('/admineklelogin', {
+                name: fullname.value,
+                email: email.value,
+                password: password.value,
+                sirketname:sirketname.value
+            })
+        }
+    } 
+})
+
+const sendData = (path, data) => {
+    fetch(path, {
+        method: 'post',
+        headers:new Headers( {'Content-Type': 'application/json'}),
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(data => processData(data));
+
+}
+
+const processData = (data) => {
+    loader.style.display = null;
+    if(data.alert){
+        showFormError(data.alert);
+    } else if(data.email){
+        sessionStorage.admin = JSON.stringify(data);
+        if(location.search.includes('after')){
+            let pageId = location.search.split('=')[1];
+            location.replace(`/products/${pageId}`);
+        } else{
+            location.replace('/adminyonetici');
+        }
+    } 
+}
+
+
+const showFormError = (err) => {
+    let errorEle = document.querySelector('.error');
+    errorEle.innerHTML = err;
+    errorEle.classList.add('show')
+
+    setTimeout(() => {
+        errorEle.classList.remove('show')
+    }, 2000)
+}
+
+
+
+
+
+
+
+let noProductImg = document.querySelector('.no-product');
+
+const setupProducts = () => {
+    fetch('/get-adminyonetici', {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify({email : admin.email})
+    })
+    .then(res => res.json())
+    .then(data => {
+        loader.style.display = 'none';
+        console.log(data);
+
+        if(data == 'no products'){
+            noProductImg.style.display = 'block';
+        } else{
+            data.forEach(profil => createYönetici(profil));
+        }
+    })
+}
+
+setupProducts();
+
+
+const createYönetici = (data) => {
+    let productContainer = document.querySelector('.yönetici');
+    productContainer.innerHTML += `
+
+    <tr>
+    <td>
+     
+    </td>
+    <td>
+      <p class="text-xs font-weight-bold mb-0">${data.email}</p>
+    </td>
+    <td class="align-middle">
+       
+       <p class="text-xs font-weight-bold mb-0">${data.name}</p>
+       <p class="text-xs font-weight-bold mb-0">${data.sirketname}</p>
+     </td>
+    <td class="align-middle">
+    <button class="text-secondary font-weight-bold text-xs" onclick="deleteItem('${data.email}') || deleteItem('${data.id}') " >SİL</button>
+
+    </td>
+  </tr>
+         `
+   
+}
+
+const deleteItem = (email, id) => {
+    fetch('/delete-adminyonetici', {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify({email:email, id:id})
+
+    }).then(res => res.json())
+    .then(data => {
+        // process data
+        if(data == 'success'){
+            location.reload();
+        } else{
+            showAlert('some error occured');
+        }
+    })
+}
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+/* Genel stiller */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  #map {
+    height: 400px;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+ #lat, #lng{
+  display: none;
+ }
+  form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  input[type="number"]:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 10px rgba(102, 175, 233, 0.6);
+  }
+  
+  #card-element {
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #66afe9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2196f3;
+  }
+  
+  /* Hata mesajları için stiller */
+  #error-message {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+  #error-message.visible {
+    display: block;
+  }
+  
+  #success-message {
+    color: #5cb85c;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+  #success-message.visible {
+    display: block;
+  }
+  

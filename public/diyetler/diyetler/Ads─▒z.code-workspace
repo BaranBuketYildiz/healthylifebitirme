@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "diyetler",
+			"path": "."
+		},
+		{
+			"name": "images",
+			"path": "../images"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "diyetler"
+	}
+}

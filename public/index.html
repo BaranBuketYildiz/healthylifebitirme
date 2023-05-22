@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Verification</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+	<h1>Mail Doğrulama</h1>
+    <div class="form">
+        <input type="email" id="email" placeholder="Emailinizi giriniz...">
+
+        <div class="otpverify">
+            <input type="text" id="otp_inp" placeholder="Enter the OTP sent to your Email...">
+            <button class="btn" id="otp-btn" onclick="verifyOTP()">Onayla</button>
+        </div>
+
+        <button onclick="sendOTP()" class="btn">Kodu gönder</button>
+         <!-- Onaylanmamış mail mesajı -->
+    
+    </div>
+	
+	<script src="js/script.js"></script>
+
+
+</body>
+</html>

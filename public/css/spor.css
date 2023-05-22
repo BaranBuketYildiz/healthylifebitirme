@@ -1,0 +1,118 @@
+
+/*About*/
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_main .image img{
+    width: 800px;
+    position: relative;
+    top: 60px;
+    border-radius: 50%;
+}
+
+.about .about_main .about_text h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.about .about_main .about_text h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 50px;
+}
+
+.about .about_main .about_text h3{
+    font-size: 20px;
+    margin:0 50px 0px 0; 
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+    font-size: 20px;
+}
+
+
+
+/*Menu*/
+
+.menu{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.menu h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.menu .menu_button{
+   
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 45px ;
+}
+.menu_button {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 50px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    position: absolute;
+ 
+
+
+  }
+  
+  .menu_button .vucut, .bacak, .kol, .omuz, .karin, .gogus {
+   
+    height:400px;
+    width: 400px;
+    background-size: cover;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+   margin-left: 100px;
+   border-radius: 50%;
+   border: 4px solid rgb(163, 16, 16);
+    } /* Green */
+  .menu_button .vucut,.bacak, .kol, .omuz, .karin, .gogus:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+  
+  
+  
+ 
+ 

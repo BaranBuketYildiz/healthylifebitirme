@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background: #e9e9e9;
+    padding: 20px 5vw;
+    font-family: 'lato', sans-serif;
+}
+   .add-product .text{
+    font-size: 45px;
+    font-family: 'lato', sans-serif;
+    color: black;
+   }
+   
+    .textt, .texttname{
+    font-size: 30px;
+    border: 3px solid #ffff;
+    margin-top: 15px;
+    
+    }
+    
+    .card-container {
+        background-color: #27ae60;
+        border-radius: 5px;
+        color: #5a5353;
+        padding-top: 100px;
+        position: relative;
+        width: 900px;
+        max-width: 100%;
+        text-align: center;
+        border: 10px double #010c00;
+        margin-top: 75px;
+    }
+    
+    .card-container .round {
+        border: 4px solid #0f0f0f;
+        border-radius: 2000%;
+        padding: 1px;
+        margin-top:0px;
+    }
+    
+    h6, h8{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    
+    .skills {
+        background-color: #f1f1f1e8;
+        text-align: left;
+        padding: 15px;
+        margin-top: 30px;
+    }
+    
+    .skills ul {
+        list-style-type: none;
+        margin: 5px;
+        padding: 0px;
+    }
+    
+    .skills ul li,  h7{
+        border: 3px solid #666;
+        border-radius: 15px;
+        display: inline-block;
+        font-size: 20px;
+        margin: 5px 7px 7px 0;
+        padding: 7px;
+    }
+    
+    label{
+        display:block;
+        font-size: 18px;
+        font-weight: 700;
+        color:#666;
+        margin-bottom: 5px;
+    }
+    
+    #multipleSelect{
+       max-width: 100%;
+       width:350px;
+    }
+    .vscomp-toggle-button{
+        padding:10px 30px 10px 10px;
+        border-radius: 5px;
+    }
+    
+    
+    .loader{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        z-index: 5;
+        display: none;
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
